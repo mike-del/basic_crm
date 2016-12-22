@@ -26,11 +26,11 @@ if module_choice in 'pe':
 	if module_choice == 'p':
 		new_record = input('Start new record? ')
 		if new_record == 'y':
-			new_partner = Partner()
+			new_partner = Partner(Basic_Info())
 			print(new_partner)
 	elif module_choice == 'e':
 		new_record = input('Start new record? ')
 		if new_record == 'y':
 			new_emp_id_info = Employee(Basic_Info())
-		print(new_emp_id_info)
+			print(new_emp_id_info)
 		

@@ -4,8 +4,6 @@ import os
 import sys
 import pdb
 
-import basic_info
-from basic_info import Basic_Info
 import employee
 from employee import Employee
 import partner
@@ -52,14 +50,14 @@ or enter [N]o to exit. )
 				num_record = int(input("> "))
 				clear()
 				while num_record:
-					new_partner = Partner(Basic_Info())
-					print(new_partner)
+					new_partner = Partner()
 					num_record -= 1
 					clear()
+					print(new_partner)
 		elif module_choice == 'e':
 			new_record = input('Start new record? ')
 			clear()
 			if new_record == 'y':
-				new_emp_id_info = Employee(Basic_Info())
+				new_emp_id_info = Employee()
 				print(new_emp_id_info)
 		

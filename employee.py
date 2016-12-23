@@ -1,7 +1,5 @@
 import random
 
-from basic_info import Basic_Info
-
 # List to store randomly created employee ids. 
 # This ensures that there are no duplicate emplyee ides
 employee_id = []
@@ -9,10 +7,10 @@ employee_id = []
 employee_memory = {}
 
 
-class Employee(Basic_Info):
+class Employee():
     
     """docstring for Module"""
-    def __init__(self, basic_info, **kwargs):
+    def __init__(self, **kwargs):
         def make_emp_id():
             num = random.randint(1,999)
             if num in employee_id:
@@ -21,13 +19,13 @@ class Employee(Basic_Info):
                 employee_id.append(num)
                 return num
         self.emp_uid = make_emp_id()
-        self.dept = basic_info.dept
-        self.title = basic_info.title
-        self.first_name = basic_info.first_name
-        self.last_name = basic_info.last_name
-        self.phone = basic_info.phone
-        self.address = basic_info.address
-        self.notes = basic_info.notes
+        self.first_name = input('First name: ')
+        self.last_name = input('Last name: ')
+        self.phone = input('Phone number: ')
+        self.address = input('Address: ')
+        self.title = input('Title: ')
+        self.dept = input('Department: ')
+        self.notes = input('Notes: ')
         self.social_security_num = int(input('Social security number: '))
         self.hr_pay_rate = int(input('Hourly pay rate: '))
 

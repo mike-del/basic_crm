@@ -29,7 +29,12 @@ class Partner():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-        partner_memory[self.partner_uid] = {'Department': self.dept, 'Title': self.title, 'First Name': self.first_name, 'Last Name': self.last_name, 'Phone': self.phone, 'Address': self.address, 'Notes': self.notes, }
+        info = {'id': self.partner_uid, 'department': self.dept, 'title': self.title, 'first name': self.first_name, 'last name': self.last_name, 'phone': self.phone, 'address': self.address, 'notes': self.notes, }
+
+        if self.company in partner_memory:
+            partner_memory[self.company].append(info)
+        else:
+            partner_memory[self.company] = info
 
         # This simply proves that the emplyee information is being saved in the employee_memory dictionary
         # This can be (and probably should be) removed at some point

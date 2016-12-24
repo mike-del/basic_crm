@@ -52,12 +52,13 @@ or enter [N]o to exit. )
 				while num_record:
 					new_partner = Partner()
 					num_record -= 1
-					clear()
+					# clear()
 					print(new_partner)
 		elif module_choice == 'e':
 			new_record = input('Start new record? ')
 			clear()
 			if new_record == 'y':
 				new_emp_id_info = Employee()
+				# clear()
 				print(new_emp_id_info)
 		

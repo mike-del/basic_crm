@@ -75,19 +75,19 @@ Options: [1] Enter the identification number.
                             if search_by == 1:
                                 clear()
                                 print('''
-                Please enter the identification number of the record that you wish to edit.
+Please enter the identification number of the record that you wish to edit.
                                     ''')
                                 search_by_value = input('> ').strip()
                             elif search_by == 2:
                                 clear()
                                 print('''
-                Please enter the company name that you wish to edit.
+Please enter the company name that you wish to edit.
                                     ''')
                                 search_by_value = input('> ').strip().lower()
                             elif search_by == 3:
                                 clear()
                                 print('''
-                Please enter a record value field.
+Please enter a record value field.
                                     ''')
                                 search_by_value = input('> ').strip().lower()
                             else:

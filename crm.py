@@ -38,14 +38,16 @@ while True:
 		if module_choice == 'p':
 			print('''
 
-Would you like to start a new partner record?
-(Enter [Y]es to create a new partner record
-or enter [N]o to exit. )
+Instructions: Enter the option number that you wish to execute.
+Options: [1] Create a new record
+	 [2] Edit an existing record
+	 [3] Quit Partner Module
+	 [4] Close and Save Intrepid CRM
 
 				''')
-			new_record = input("> ")
+			new_record = int(input("> "))
 			clear()
-			if new_record == 'y':
+			if new_record == 1:
 				print('\nHow many new records would you like to enter?\n')
 				num_record = int(input("> "))
 				clear()
@@ -54,8 +56,17 @@ or enter [N]o to exit. )
 					num_record -= 1
 					# clear()
 					print(new_partner)
+			elif new_record == 2:
+				Partner.edit_partner_memory()
 		elif module_choice == 'e':
-			new_record = input('Start new record? ')
+			print('''
+
+Would you like to start a new partner record?
+(Enter [Y]es to create a new partner record
+or enter [N]o to exit. )
+
+				''')
+			new_record = input("> ")
 			clear()
 			if new_record == 'y':
 				new_emp_id_info = Employee()
